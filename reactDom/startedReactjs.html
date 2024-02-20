@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Started With ReactJS</title>
+    <!-- ReactJS Library - version 17-->
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+</head>
+<body>
+    <h1>Add Reactjs into website</h1>
+
+    <!-- Bài tập 1: a - Tạo thẻ h1 với title và thược tính cho trước sử dụng DOM Js thuân -->
+    <script>
+        const h1Dom = document.createElement("h1"); // return object
+
+        // h1Dom.title = "Hello"
+        // h1Dom.className = "Heading" // remember className not class
+
+        // h1Dom.innerText = "Hello guys";
+        // h1Dom.style.color = "blue"
+
+        h1Dom.innerText = "Hello guys";
+        h1Dom.setAttribute("title", "Hello");
+        h1Dom.setAttribute('class', "heading");
+        h1Dom.setAttribute("style","color: blue")
+
+        // add to body tag
+        document.body.appendChild(h1Dom);
+
+        // Using React
+        const h1React = React.createElement("h1", {
+            title: "Hello",
+            class: "heading"
+        }, "Hello guys with ReactJS")
+
+        console.log(h1React)
+    </script>
+</body>
+</html>

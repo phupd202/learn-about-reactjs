@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3 React Dom - F8</title>
+    <!-- ReactJS Library - version 17-->
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+</head>
+<body>
+    <h1>Add Reactjs into website</h1>
+
+    <!-- Exercise 3: Create div tag with 2 child h2 and p -->
+    <script>
+        // Using Dom js
+        const divDom = document.createElement('div');
+        divDom.setAttribute("class", 'post-item')
+
+        // Create h2, p
+        const h2Dom = document.createElement('h2');
+        h2Dom.setAttribute("title", 'Học ReactJS tại F8')
+        h2Dom.innerText = "Học ReactJs";
+
+        const pDom = document.createElement('p')
+        pDom.innerText = "Học ReactJS từ cơ bản tới nâng cao"
+
+        divDom.appendChild(h2Dom);
+        divDom.appendChild(pDom);
+
+        document.body.appendChild(divDom);
+
+        // Method 2: Using React.createElement
+        const divReact = React.createElement('div', {
+            class: "post-item"
+        }, 
+        React.createElement("h2", {
+            title: "Học ReactJS tại F8"
+        }, "Học ReactJS"),
+
+        React.createElement('p', null, "Học ReactJS từ cơ bản tới nâng cao!")
+        );
+
+        console.log("The div tag is created by ReactJS", divReact)
+    </script>
+</body>
+</html>
