@@ -1,0 +1,7 @@
+ReactDom 
+- React.createElement: tương tự như DOM tuy nhiên cú pháp ngắn gọn hơn
+- Cú pháp: 
+	+ React.createLement(type, props, childer, n)
+	+ type: maybe tag,..
+	+ props: attribute
+	+ children: content inner tag html

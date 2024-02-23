@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- ReactDom cần được tải sau khi react được tải -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel to support JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Thực hành JSX</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- Tạo ul với 2 thẻ li -->
+    <script type="text/babel">
+        const reactCourse = [
+            {
+                name: "HTML, CSS"
+            }, 
+            {
+                name: "Response Designt"
+            }, 
+            {
+                name: "ReactJS"
+            }
+        ]
+
+        const ul = (
+            <ul>
+                {reactCourse.map((course, index) => (
+                    <li key={index}>{course.name}</li>
+                ))}
+            </ul>
+        );
+
+        ReactDOM.render(ul, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
+<!-- 
+Notice: Must add to babel into file to code jsx can run. 
+map: trả về mảng
+-->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- ReactDom cần được tải sau khi react được tải -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel to support JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Thực hành Component</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // function type PostItem.js
+        function PostItem({content, time}) {
+            return (
+                <React.Fragment>
+                    <h2>Tiêu đề</h2>
+                    <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="Ảnh minh hoạ" />
+                    <p>{content}</p>
+                    <p>{time}</p>
+                </React.Fragment>
+            );
+        }
+        
+        // App.js
+        function App() {
+            return (
+                <React.Fragment>
+                    // tưởng tượng như gọi hàm và truyển đối số
+                    <PostItem content = "New content" time = "17h"/> 
+                    <PostItem content = "Đây là content thứ hai" time = "18h"/>
+                    <PostItem content = "Đây là content thứ ba" time = "19h"/>
+                </React.Fragment>
+            );
+        }
+    
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+    
+</body>
+</html>

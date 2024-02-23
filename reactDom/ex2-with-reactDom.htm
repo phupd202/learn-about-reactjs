@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- ReactDom cần được tải sau khi react được tải -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Thực hành React DOM</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <!-- Tạo ul với 2 thẻ li -->
+    <script>
+        const liReact1 = React.createElement('li', null, "Javascript");
+        const liReact2 = React.createElement('li', null, 'ReactJS');
+
+        const ulReact = React.createElement('ul', null, liReact1, liReact2);
+
+        console.log(ulReact);
+
+        // version 17
+        // get root
+        const root = document.getElementById('root');
+
+        // render
+        ReactDOM.render(ulReact, root);
+
+        /*version 18*/
+        // const domContainer = document.getElementById('root')
+
+        // const root = ReactDOM.createRoot(domContainer);
+
+        // root.render(ulReact);
+
+    </script>
+</body>
+</html>

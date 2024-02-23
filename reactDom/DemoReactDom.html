@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Dom</title>
+    <!-- ReactJS Library - version 17-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const divReact = React.createElement('div', {
+            className: "post-item" // className not class
+        }, 
+        React.createElement("h2", {
+            title: "Học ReactJS tại F8"
+        }, "Học ReactJS"),
+
+        React.createElement('p', null, "Học ReactJS từ cơ bản tới nâng cao!")
+        );
+
+        console.log("The div tag is created by ReactJS", divReact)
+
+        // get root wiht JS
+        const root = document.getElementById('root')
+
+        // Render with React DOM
+        ReactDOM.render(divReact, root)
+
+    </script>
+</body>
+</html>
